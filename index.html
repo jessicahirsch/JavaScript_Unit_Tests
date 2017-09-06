@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<link rel="shortcut icon" type="image/png" href="https://www.w3schools.com/w3images/lights.jpg"/>
+
+</head>
+<body>
+
+<p id="demo"></p>
+
+<!-- 
+<button id="button" class="uk-width-1-1 uk-button n-btn-primary">First Button</button>
+<button id="button" class="uk-width-1-1 uk-button n-btn-primary">Second Button</button>
+<button id="button" class="uk-width-1-1 uk-button n-btn-primary" disabled=disabled>Third Button</button> -->
+
+<button id="myBtn">My Button</button>
+
+<p>Click the button below to disable the button above.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<input id="currentPassword"></input>
+<input id="password"></input>
+<input id="confirmPassword"></input>
+
+<button class="files__remove" />
+
+<!-- <input id="lifecheck" type="checkbox" checked /> -->
+
+<!-- <input id="bariatric" type="checkbox" /> -->
+
+<!-- <div class="list-heeader__title">255 Needs Attention Requests Found</div> -->
+
+<script>
+
+// x = document.getElementsByClassName('requests__unit-element requests__unit-element--facility');
+
+document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[13] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[14] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[15] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[16] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[17] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[18] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[19] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[20] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[21] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[22];
+
+var unitNum = (document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[13] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[14] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[15] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[16] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[17] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[18] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[19] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[20] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[21] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[22]);
+
+// document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[13] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[14] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[15] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[16] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[17] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[18] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[19] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[20] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[21] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[1].innerHTML[22];
+x = document.getElementsByClassName('ui-table__cell requests__cell requests__cell--trip');
+
+string1 = "107";
+string2 = "01, 02, 03";
+
+function scanUnitRequests() {
+	for(var i = 0; i < x.length; i++) {
+		if((document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[13] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[14] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[15] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[16] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[17] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[18] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[19] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[20] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[21] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[22]) == string1 || string2) {
+	console.log('okay')
+} else {
+	console.log('mismatch')
+}
+	}
+}
+
+scanUnitRequests();
+
+string1 = "107";
+string2 = "01, 02, 03";
+
+function scanUnitRequests() {
+	for(var i = 0; i < x.length; i++) {
+		if((document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[13] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[14] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[15] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[16] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[17] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[18] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[19] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[20] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[21] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[22]) == string1 || string2) {
+	callback(true)
+} else {
+	callback("Failed!")
+}
+	}
+}
+
+scanUnitRequests();
+
+document.getElementsByClassName("uk-width-1-1 ng-pristine ng-valid ng-empty ng-touched").addEventListener('click', function () {
+    var text = document.getElementById('text');
+    text.value += ' after clicking';
+});
+
+var emtPic = document.getElementsByClassName('n-emt-photo ng-scope')[9];
+var emtPic = document.getElementsByClassName('n-emt-photo ng-scope')[6];
+
+function checkEmtPic() {
+	if(emtPic.hasAttribute('ng-src') == false) {
+		callback("Failed!")
+	} else {
+		callback(true)
+	}
+}
+
+checkEmtPic();
+
+var toggle = document.getElementsByClassName('uiSwitch__contents uiSwitch__switcher')[16];
+
+function activeToggle() {
+	if(toggle.classList.contains('uiSwitch__switcher--clicked') == true) {
+		console.log('true')
+	} else {
+		console.log('Failed!')
+	}
+}
+
+activeToggle();
+
+function activeToggle() {
+	if(toggle.classList.contains('uiSwitch__switcher--clicked') == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+activeToggle();
+
+var add = document.getElementsByClassName('uiButton uiButton--primary uiButton--big')[0];
+
+function addDisabled() {
+	if(add.classList.contains('uiButton--disabled') == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+addDisabled();
+
+var activeToggle = document.getElementsByClassName('uiSwitch__contents uiSwitch__switcher uiSwitch__switcher--clicked').length
+
+function checkActiveOn() {
+	if(activeToggle !== 50) {
+		console.log('Fail')
+	} else {
+		console.log('Pass')
+	}
+}
+
+checkActiveOn();
+
+var activeToggle = document.getElementsByClassName('uiSwitch__contents uiSwitch__switcher uiSwitch__switcher--clicked').length
+
+function checkActiveOn() {
+	if(activeToggle !== 50) {
+		callback("Failed!")
+	} else {
+		callback(true)
+	}
+}
+
+checkActiveOn();
+
+document.getElementsByClassName('uiSwitch__contents uiSwitch__switcher uiSwitch__switcher--clicked').length !== 50;
+
+var successTrip = document.getElementsByClassName('n-status-indicator n-status-success ng-scope')[0].click();
+
+function clickRequest() {
+	if ((successTrip >= 1) == true) {
+		requestOpen[0].click();
+	} else {
+		console.log('do nothing')
+	}
+}
+
+clickRequest();
+
+var request = document.getElementsByClassName('n-request-view-widget').length;
+var requestOpen = document.getElementsByClassName('n-request-view-widget');
+
+function clickRequest() {
+	if ((request >= 1) == true) {
+		requestOpen[0].click();
+	} else {
+		console.log('do nothing')
+	}
+}
+
+clickRequest();
+
+var close = document.getElementsByClassName('n-close');
+
+function closeRequest() {
+	if((close.length ==1) == true) {
+		close[0].click();
+	} else {
+		console.log('do nothing')
+	}
+}
+
+closeRequest();
+
+var form = document.getElementsByClassName('ui-input__input search__input ng-valid ng-dirty ng-touched search__input--search-activated');
+
+form.click(function() {
+    $(this).closest('form').find("input[type=text], textarea").val("");
+});
+
+var unitNum = document.getElementsByClassName('requests__unit-element requests__unit-element--facility');
+
+function checkAllUnits() {
+	for(var i = 0; i < unitNum.length; i++) {
+		if(unitNum.innerText('107' || '') !== true) {
+			console.log('error')
+		} else {
+			console.log('pass')
+		}
+	}
+}
+
+checkAllUnits();
+
+document.getElementsByClassName('ui-icon ui-icon--action ui-icon__scheduled-not-assigned')[0].click();
+
+var x = document.getElementsByClassName('ui-checkbox__checkbox');
+var close = document.getElementsByClassName('request-modal-header__close')[0];
+
+function checkForBariatric() {
+	if(x[1].classList.contains('ui-checkbox--active') !== true) {
+		x[1].click()
+	} else {
+		console.log('do nothing')
+	}
+}
+
+checkForBariatric();
+
+var bariCheck = document.getElementsByClassName('requests__unit-element requests__unit-element--support requests__unit-element--light')[0].innerText;
+
+function checkForBariatric() {
+	if ((bariCheck.indexOf("Bariatric") >= 0) == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkForBariatric();
+
+var bariCheck = document.getElementsByClassName('requests__unit-element requests__unit-element--support requests__unit-element--light')[0].innerText;
+
+function checkForBariatric() {
+	if ((bariCheck.indexOf("Bariatric") >= 0) == true) {
+		console.log('contains bariatric = success')
+	} else {
+		console.log('failed')
+	}
+}
+
+checkForBariatric();
+
+var bariCheck = document.getElementsByClassName('requests__unit-element requests__unit-element--support requests__unit-element--light').innerText
+
+for()
+
+var elements = document.querySelectorAll("[class='requests__unit-element requests__unit-element--support requests__unit-element--light']")innerText;
+function checkPage() {
+	for (var i = 0; i < x.length; i++) {
+		var innerText = x[i].innerText;
+		if(innerText.includes('Bariatric')
+			innerText[0].click();
+		} else {
+			console.log('do nothing')
+		}
+	}
+
+checkPage();
+
+var elements = document.getElementsByClassName('requests__unit-element requests__unit-element--support requests__unit-element--light');
+
+elements.forEach(function(element) {
+	console.log(element)
+})
+
+
+ 
+document.getElementsByClassName('requests__unit-element requests__unit-element--support requests__unit-element--light').innerText;
+
+date = Date();
+
+var officialDate = (date[0] + date[1] + date[2] + date[3] + date[4] + date[5] + date[6] + date[7] + date[8] + date[9] + date[10] + date[11] + date[12] + date[13] + date[14]);
+
+var dateOnPage = document.getElementsByClassName('ui-datepicker-text__date')[0].innerText;
+
+function checkDateMatch() {
+	if(officialDate == dateOnPage) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkDateMatch();
+
+var amountofDrivers = document.getElementsByClassName('drivers__cell--unit').length;
+
+var activeDrTitle = document.getElementsByClassName('list-header__title')[0].innerHTML;
+
+calcDrivers = parseInt(activeDrTitle[17] + activeDrTitle[18] + activeDrTitle[19]);
+
+function activeDriversMatch() {
+	if(amountofDrivers == calcDrivers) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+activeDriversMatch();
+
+var amountOfTrips = document.getElementsByClassName('ui-table__cell requests__cell requests__cell--trip').length;
+
+var currentTrips = document.getElementsByClassName('list-header__title')[0].innerHTML;
+
+var numCurrentTrips = parseInt(currentTrips[17] + currentTrips[18] + currentTrips[19]);
+
+function currentTripsMatch() {
+	if(amountOfTrips == numCurrentTrips) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+currentTripsMatch();
+
+function currentTripsMatch() {
+	if(amountOfTrips == numCurrentTrips) {
+		console.log('match')
+	} else {
+		console.log("Failed!")
+	}
+}
+
+currentTripsMatch();
+
+var cancelPageTrips = document.getElementsByClassName('ui-icon ui-icon--action ui-icon__requester-cancelled');
+
+var completePageTrips = document.getElementsByClassName('ui-icon ui-icon--action ui-icon__completed').length;
+
+function checkNegativeCompTrips() {
+	if(completePageTrips !== 0) {
+		callback(true)
+	} else {
+		callbacK("Failed!")
+	}
+}
+
+checkNegativeCompTrips();
+
+var cancelPageTrips = document.getElementsByClassName('ui-icon ui-icon--action ui-icon__requester-cancelled');
+
+var completePageTrips = document.getElementsByClassName('ui-icon ui-icon--action ui-icon__requester-cancelled').length;
+
+function checkNegativeCompTrips() {
+	if(completePageTrips !== 0) {
+		callback(true)
+	} else {
+		callbacK("Failed!")
+	}
+}
+
+checkNegativeCompTrips();
+
+
+
+// var amountOfTrips = document.getElementsByClassName("ui-table__cell requests__cell requests__cell--trip");
+
+// var tripsPerPage = amountOfTrips.length
+
+// var upcomingReqs = document.getElementsByClassName('list-header__title')[0].innerHTML;
+
+// var calcUpcoming = parseInt(upcomingReqs[17] + upcomingReqs[18]);
+
+// tripsPerPage == calcUpcoming
+
+// function checkUpcomingMatch() {
+// 	if(tripsPerPage == calcUpcoming) {
+// 		callback(true)
+// 	} else {
+// 		callback("Failed!")
+// 	}
+// }
+
+// checkUpcomingMatch();
+
+// function checkUpcomingMatch() {
+// 	if(tripsPerPage == calcUpcoming) {
+// 		console.log('match')
+// 	} else {
+// 		console.log('incorrect calculation')
+// 	}
+// }
+
+// checkUpcomingMatch();
+
+// function historyRequests() {
+// 	if(document.getElementsByClassName('list-header__title')[0].innerHTML[17] == 0) {
+// 		callback(true)
+// 	} else {
+// 		callback("Failed!")
+// 	}
+// }
+
+// historyRequests();
+
+// document.getElementsByClassName('list-header__title')[0].innerHTML[17] == 0
+
+// parseInt(document.getElementsByClassName('list-header__title')[0].innerHTML[17]) + parseInt(document.getElementsByClassName('list-header__title')[0].innerHTML[18]);
+
+var needsAttention = (document.getElementsByClassName('tabs-panel__tab-name')[0].innerHTML[53] + document.getElementsByClassName('tabs-panel__tab-name')[0].innerHTML[54] + document.getElementsByClassName('tabs-panel__tab-name')[0].innerHTML[55])
+
+var needsAttentionRequestsFound = document.getElementsByClassName("list-header__title")[0].innerHTML
+needsAttReqFoundStr = (needsAttentionRequestsFound[17] + needsAttentionRequestsFound[18] + needsAttentionRequestsFound[19])
+
+function needsAttStrMatch() {
+	if(needsAttention == needsAttReqFoundStr) {
+		console.log('match')
+	} else {
+		console.log('incorrect calculation')
+	}
+}
+
+needsAttStrMatch();
+
+function needsAttStrMatch() {
+	if(needsAttention == needsAttReqFoundStr) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+needsAttStrMatch();
+
+var historyRequests = document.getElementsByClassName('list-header__title')[0].innerHTML[17] + document.getElementsByClassName('list-header__title')[0].innerHTML[18] + document.getElementsByClassName('list-header__title')[0].innerHTML[19]
+
+var cancelledSpan = document.getElementsByClassName("filter__element-text")[0];
+var cancelledSpanNumber = cancelledSpan.lastChild.previousElementSibling
+var cancelledString = cancelledSpanNumber.innerHTML
+
+// var stringNoParentheses = cancelledString.substr(cancelledString.length-3, cancelledString.length-2)
+
+var stringNoParentheses = cancelledString.slice(1, -1)
+
+hisInt = parseInt(historyRequests);
+cancInt = parseInt(stringNoParentheses);
+
+historyRequests == stringNoParentheses
+
+function checkStringsMatch() {
+	if(historyRequests == stringNoParentheses) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkStringsMatch();
+
+function checkStringsMatch() {
+	if(hisInt == cancInt) {
+		console.log('match')
+	} else {
+		console.log('incorrect calculation')
+	}
+}
+
+checkStringsMatch();
+
+var historyRequests = document.getElementsByClassName('list-header__title')[0].innerHTML[17] + document.getElementsByClassName('list-header__title')[0].innerHTML[18] + document.getElementsByClassName('list-header__title')[0].innerHTML[19]
+
+var completedSpan = document.getElementsByClassName("filter__element-text")[1];
+var completedSpanNumber = completedSpan.lastChild.previousElementSibling
+var completedString = completedSpanNumber.innerHTML
+
+// var stringNoParentheses = cancelledString.substr(cancelledString.length-3, cancelledString.length-2)
+
+var stringNoParentheses = completedString.slice(1, -1)
+
+hisInt = parseInt(historyRequests);
+compInt = parseInt(stringNoParentheses);
+
+// historyRequests == stringNoParentheses
+
+function checkStringsMatch() {
+	if(hisInt == compInt) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkStringsMatch();
+
+var historyRequests = ((document.getElementsByClassName('list-header__title')[0].innerHTML[17]) + (document.getElementsByClassName('list-header__title')[0].innerHTML[18]))
+
+var completedSpan = document.getElementsByClassName("filter__element-text")[1];
+var completedSpanNumber = completedSpan.lastChild.previousElementSibling
+var completedString = completedSpanNumber.innerHTML
+
+var stringNoParentheses = completedString.substr(completedString.length-3, completedString.length-2)
+
+hisInt = parseInt(historyRequests);
+compInt = parseInt(completeStrNoParentheses);
+
+historyRequests == stringNoParentheses
+
+function checkStringsMatch() {
+	if(hisInt == compInt) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkStringsMatch();
+
+var historyRequests = ((document.getElementsByClassName('list-header__title')[0].innerHTML[17]) + (document.getElementsByClassName('list-header__title')[0].innerHTML[18]))
+
+var cancelledSpan = document.getElementsByClassName("filter__element-text")[0];
+var cancelledSpanNumber = cancelledSpan.lastChild.previousElementSibling
+var cancelledString = cancelledSpanNumber.innerHTML
+
+var completedSpan = document.getElementsByClassName("filter__element-text")[1];
+var completedSpanNumber = completedSpan.lastChild.previousElementSibling
+var completedString = completedSpanNumber.innerHTML
+
+var cancelStrNoParentheses = cancelledString.substr(cancelledString.length-3, cancelledString.length-2);
+var completeStrNoParentheses = completedString.substr(completedString.length-3, completedString.length-2);
+
+cancInt = parseInt(cancelStrNoParentheses);
+compInt = parseInt(completeStrNoParentheses);
+
+addedReq = (cancInt + compInt);
+
+hisInt = parseInt(historyRequests);
+
+function checkReqMatch() {
+	if(addedReq == hisInt) {
+		console.log('match')
+	} else {
+		console.log('incorrect calculation')
+	}
+}
+
+checkReqMatch();
+
+function checkReqMatch() {
+	if(addedReq == hisInt) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkReqMatch();
+
+function checkReqMatch() {
+	if(addedReq == historyRequests) {
+		console.log('no match')
+	} else {
+		console.log('try again')
+	}
+}
+
+checkReqMatch();
+
+// function checkConfirmDisabled() {
+// 	if(document.getElementsByClassName('uiButton uiButton--primary uiButton--no-uppercase')[1].hasAttribute('disabled') == true) {
+// 		callback(true)
+// 	} else {
+// 		callback("Failed!")
+// 	}
+// }
+
+// checkConfirmDisabled();
+
+// function checkConfirmDisabled() {
+// 	if(document.getElementsByClassName('uiButton uiButton--primary uiButton--no-uppercase')[1].hasAttribute('disabled') == true) {
+// 		console.log('disabled')
+// 	} else {
+// 		console.log('enabled')
+// 	}
+// }
+
+// checkConfirmDisabled();
+
+// var vehicleForRequest = document.getElementsByClassName('requests__unit-element requests__unit-element--support');
+
+// function checkForBariatric() {
+// 	if(vehicleForRequest.innerText.indexOf('Bariatric') < 0) {
+// 		vehicleForRequest.click();
+// 	} else {
+// 		console.log('Bariatric Request Move On')
+// 	}
+// }
+
+// checkForBariatric();
+
+// function checkForBariatric() {
+// 	for(var i = 0; i < vehicleForRequest.length; i++) {
+// 		if(vehicleForRequest.innerText.indexOf('Bariatric') !== -1) {
+// 			// Does not contain Bariatric
+// 			console.log('Bariatric Request Move On')
+// 		} else {
+// 			vehicleForRequest.click();
+// 		}
+// 	}
+// }
+
+// checkForBariatric();
+
+// function checkAttachmentDeletion() {
+// 	if (document.getElementsByClassName('files__remove').length == true) {
+// 		console.log('fail')
+// 	} else {
+// 		console.log('true')
+//    }
+// }
+
+// checkAttachmentDeletion();
+
+// function checkAttachmentDeletion() {
+// 	if(document.getElementsByClassName('files__remove').length == true) {
+// 		callback("Failed!")
+// 	} else {
+// 		callback(true)
+// 	}
+// }
+
+// checkAttachmentDeletion();
+
+var driverWaitBox = document.getElementsByClassName('ui-checkbox__checkbox')[0];
+
+function closeDriverWillNotWait() {
+	if(driverWaitBox.classList.contains('ui-checkbox--active') == true) {
+		document.getElementsByClassName('request-modal-header__close')[0].click() && callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+closeDriverWillNotWait();
+
+var driverWaitBox = document.getElementsByClassName('ui-checkbox__checkbox')[0];
+
+function closeDriverWillNotWait() {
+	if(driverWaitBox.classList.contains('ui-checkbox--active') == true) {
+		console.log('checked')
+	} else {
+		document.getElementsByClassName('request-modal-header__close')[0].click() && console.log('unchecked')
+	}
+}
+
+closeDriverWillNotWait();
+
+// function checkWaitTime() {
+// 	if(document.getElementsByClassName('ui-input-group__text-normal ui-input-group__text-normal--timepicker').length == 1) {
+// 		console.log('wait time visible')
+// 	} else {
+// 		console.log('wait time not visible')
+// 	}
+// }
+
+// checkWaitTime();
+
+// document.getElementsByClassName('ui-table__cell requests__cell requests__cell--trip')[0].click();
+
+// document.getElementById("demo").innerHTML = Date();
+
+// var priceEls = document.getElementById("demo");
+// for (var i = 0; i < priceEls.length; i++) {
+//   var price = priceEls[i].innerText;
+//   console.log("Price: " + price);
+// }
+
+// var dateClass = document.getElementById("demo");
+
+// function matchDates() {
+// 	for (var i = 0; i < dateClass.length; i++) {
+// 		var date = dateClass.innerHTML;
+// 		console.log(date)
+// 	}
+// }
+
+// matchDates();
+
+// var addButton = document.getElementsByClassName('uiButton uiButton--primary uiButton--big')[0];
+
+// var activeSwitch = document.getElementsByClassName('uiSwitch__contents uiSwitch__switcher');
+
+// function checkActiveSwitchedOn() {
+// 	if(activeSwitch.classList.contains('uiSwitch__switcher--clicked')) {
+// 		console.log('on')
+// 	} else {
+// 		console.log('off')
+// 	}
+// }
+
+// checkActiveSwitchedOn();
+
+// var activeSwitch = document.getElementsByClassName('uiSwitch__wrapper')[2];
+
+// function checkActiveSwitchedOn() {
+// 	if(activeSwitch.classList.contains('uiSwitch__wrapper--clicked')) {
+// 		console.log('on')
+// 	} else {
+// 		console.log('off')
+// 	}
+// }
+
+// checkActiveSwitchedOn();
+
+// var toggle = document.getElementsByClassName('uiSwitch__contents uiSwitch__switcher');
+
+// function checkInServiceSwitchedOn() {
+// 	if(toggle.classList.contains('uiSwitch__switcher--clicked')) {
+// 		console.log('on')
+// 	} else {
+// 		console.log('off')
+// 	}
+// }
+
+// checkInServiceSwitchedOn();
+
+// var addButton = document.getElementsByClassName('uiButton uiButton--primary uiButton--big')[0];
+
+// function checkAddDisabled() {
+//    if (addButton.classList.contains('uiButton--disabled')) {
+//      console.log('disabled')
+//    } else {
+//      console.log('enabled')
+//    }
+// }
+
+// checkAddDisabled();
+
+// function checkAddDisabled() {
+// 	if(addButton.classList.contains('uiButton--disabled')) {
+// 		callback(true)
+// 	} else {
+// 		callback('Failed!')
+// 	}
+// }
+
+// checkAddDisabled();
+
+// if ($('.list-heeader__title').length === $('.list-heeader__title:contains("255 Needs Attention Requests Found")').length) {
+//     alert("Do nothing");
+// }
+// else {
+//     alert("Do something");
+// }
+
+// var bariatric = document.getElementById('Bariatric')
+
+// function checkBariatric() {
+// 	if(document.getElementById('bariatric').checked) {
+// 		console.log('checked')
+// 	} else {
+// 		console.log('unchecked')
+// 	}
+// }
+
+// checkBariatric();
+
+//var addButton = document.getElementsByClassName('uiButton uiButton--primary uiButton--big')[0];
+
+// function checkFilterDisabled() {
+
+//     if($('.uiButton uiButton--primary uiButton--big').hasClass('uiButton--disabled') == true) {
+//     	console.log('disabled')
+//     } else {
+//     	console.log('enabled')
+//     }
+// }
+
+// checkFilterDisabled();
+
+// var currentPassword = document.getElementById('currentPassword').value;
+
+// function checkEmptyValue() {
+// 	if(currentPassword = "") {
+// 		console.log('empty')
+// 	} else {
+// 		console.log('has input')
+// 	}
+// }
+
+// checkEmptyValue();
+
+
+// var currentPassword = document.getElementById('currentPassword').value;
+// var password = document.getElementById('password').value;
+// var confirmPassword = document.getElementById('confirmPassword').value;
+
+// function checkEmptyValue() {
+//    if(currentPassword = ""  ) {
+//      callback(true); 
+//    } else {
+//      callback("Failed!")
+//    }
+// }
+
+// checkEmptyValue();
+
+// var checkbox = document.getElementById('lifecheck');
+
+// function checkBox() {
+// 	if(document.getElementById('lifecheck').checked) {
+// 		console.log('checked')
+// 	} else {
+// 		console.log('unchecked')
+// 	}
+// }
+
+//checkBox();
+
+// function myFunction() {
+//     document.getElementById("myBtn").disabled = true;
+// }
+
+// var disabledZones = document.getElementsByClassName("btn");
+
+// function checkDisabled() {
+//     if($("#button").hasClass("btn") == true) {
+//     	console.log('disabled')
+//     } else {
+//     	console.log('enabled');
+//     }
+// }
+
+// checkDisabled();
+
+// var button = document.getElementsByClassName('n-filter-buttson-container');
+
+//var secondButton = document.getElementsByClassName('uk-width-1-1 uk-button n-btn-primary')[1];
+//var thirdButton = document.getElementsByClassName('uk-width-1-1 uk-button n-btn-primary')[2];
+
+// function checkAttribute() {
+// 	if(thirdButton.getAttribute('disabled') == true) {
+// 		console.log('true')
+// 	} else {
+// 		console.log('false')
+// 	}
+// }
+
+// checkAttribute();
+
+//console.log(secondButton.hasAttribute('disabled'));
+//console.log(thirdButton.hasAttribute('disabled'));
+
+// document.getElementsByClassName('.uk-width-1-1').hasAttribute('name')
+
+// function myFunction() {
+//     document.getElementById("myBtn").disabled = true;
+// }
+
+// console.log('true');
+</script>
+
+</body>
+</html>
