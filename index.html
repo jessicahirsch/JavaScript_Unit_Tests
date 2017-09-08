@@ -35,6 +35,20 @@
 
 <script>
 
+document.getElementsByClassName('n-request-general-date n-request-general-date-success')[0].click();
+
+var nextAssign = document.getElementsByClassName('uk-button n-btn-primary uk-width-1-1')[1];
+
+function nextDisabled() {
+	if(nextAssign.hasAttribute('disabled') == true) {
+		console.log('disabled')
+	} else {
+		console.log('enabled: fail')
+	}
+}
+
+nextDisabled();
+
 var isRespiratoryTherapistRequired = document.getElementsByTagName('input')[61];
 
 function rtRequired() {
