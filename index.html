@@ -35,7 +35,7 @@
 
 <script>
 
-var isRespiratoryTherapistRequired = document.getElementsByClassName('ng-valid ng-dirty ng-valid-parse')[1];
+var isRespiratoryTherapistRequired = document.getElementsByTagName('input')[61];
 
 function rtRequired() {
 	if(isRespiratoryTherapistRequired.classList.contains('ng-not-empty') == true) {
@@ -46,6 +46,18 @@ function rtRequired() {
 }
 
 rtRequired();
+
+var ventChecked = document.getElementsByTagName('input')[62];
+
+function ventIsChecked() {
+	if(ventChecked.classList.contains('ng-valid-parse') == true) {
+		console.log('checked')
+	} else {
+		console.log('unchecked')
+	}
+}
+
+ventIsChecked();
 
 // x = document.getElementsByClassName('requests__unit-element requests__unit-element--facility');
 
