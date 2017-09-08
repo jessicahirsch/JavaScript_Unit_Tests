@@ -35,7 +35,17 @@
 
 <script>
 
-document.getElementsByClassName('n-request-general-date n-request-general-date-success')[0].click();
+var enRoute = document.getElementsByClassName('n-request-general-date n-request-general-date-success');
+
+function clickEnRoute() {
+	if(enRoute.length == true) {
+		enRoute[0].click();
+	} else {
+		console.log('do nothing')
+	}
+}
+
+clickEnRoute();
 
 var nextAssign = document.getElementsByClassName('uk-button n-btn-primary uk-width-1-1')[1];
 
