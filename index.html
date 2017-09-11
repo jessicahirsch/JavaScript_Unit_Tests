@@ -35,6 +35,18 @@
 
 <script>
 
+var uber = document.getElementsByClassName('uk-button n-btn-secondary uk-width-1-1 ng-binding');
+
+function checkUber() {
+	if(uber.length == 1) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkUber();
+
 var enRoute = document.getElementsByClassName('n-request-general-date n-request-general-date-success');
 
 function clickEnRoute() {
