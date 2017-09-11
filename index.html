@@ -37,6 +37,10 @@
 
 var uber = document.getElementsByClassName('uk-button n-btn-secondary uk-width-1-1 ng-binding');
 
+// document.getElementsByClassName('uk-button n-btn-secondary uk-width-1-1 ng-binding')[0].innerText == "Request Uber"
+
+var uber = document.getElementsByClassName('uk-button n-btn-secondary uk-width-1-1 ng-binding');
+
 function checkUber() {
 	if(uber.length == 1) {
 		callback(true)
@@ -48,7 +52,7 @@ function checkUber() {
 checkUber();
 
 function checkUber() {
-	if(uber.length == 1) {
+	if(uber[0].innerText == "Request Uber") {
 		console.log('true')
 	} else {
 		console.log("Failed!")
