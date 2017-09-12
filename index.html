@@ -35,7 +35,7 @@
 
 <script>
 
-var uber = document.getElementsByClassName('uk-button n-btn-secondary uk-width-1-1 ng-binding');
+// var uber = document.getElementsByClassName('uk-button n-btn-secondary uk-width-1-1 ng-binding');
 
 // document.getElementsByClassName('uk-button n-btn-secondary uk-width-1-1 ng-binding')[0].innerText == "Request Uber"
 
@@ -56,6 +56,16 @@ function checkUber() {
 		console.log('true')
 	} else {
 		console.log("Failed!")
+	}
+}
+
+checkUber();
+
+function checkUber() {
+	if(uber[0].innerText == "Request Uber") {
+		callback(true)
+	} else {
+		callback("Failed!")
 	}
 }
 
