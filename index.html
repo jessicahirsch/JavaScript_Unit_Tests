@@ -35,6 +35,20 @@
 
 <script>
 
+// document.getElementsByClassName('request-modal-toolbar__status-name');
+
+var status = document.getElementsByClassName('request-modal-toolbar__status-name')[0].innerHTML;
+
+function checkStatus() {
+	if(status == ("Needs Action" || "Needs Assignment")) {
+		console.log('good')
+	} else {
+		console.log('not good')
+	}
+}
+
+checkStatus();
+
 var cancReq = document.getElementsByClassName('ui-icon ui-icon--action ui-icon__requester-cancelled')[0].click();
 
 var cancWaitReturn = document.getElementsByClassName('ui-icon ui-icon__wnr requests__trip-icon requests__trip-icon--wnr')[0].click();
