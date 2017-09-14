@@ -40,7 +40,19 @@
 var status = document.getElementsByClassName('request-modal-toolbar__status-name')[0].innerHTML;
 
 function checkStatus() {
-	if(status == ("Needs Action" || "Needs Assignment")) {
+	if(status == ("Needs Action") || status == ("Needs Assignment")) {
+		console.log('good')
+	} else {
+		console.log('not good')
+	}
+}
+
+checkStatus();
+
+var status = document.getElementsByClassName('request-modal-toolbar__status-name')[0].innerHTML;
+
+function checkStatus() {
+	if(status == ("Cancelled")) {
 		console.log('good')
 	} else {
 		console.log('not good')
