@@ -36,6 +36,11 @@
 <script>
 
 var element = document.evaluate( '/html/body/app/main-component/div/index-component/div/history-component/div/div[2]/history-list/table/tbody[1]/request-list-item[1]/td[1]/div/div[3]/div[3]/div' ,document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
+// xpath: string representing the path to find the element
+// document: contextNode (document is common) - contextNode is the node the xPath processor is currently looking for. Changes as xPath processor evaluates a query. Document as the contextNode signifies the root node as the inital contextNode that the query will evaluate. Starts with the broadest aspect.
+// namespaceResolver: no namespace used, null is common. Groupings of unique identifiers (i.e. names)
+// resultType: integer corresponding to the type of result xPathResult to return. XPathResult.FIRST_ORDERED_NODE_TYPE will be accessed as a single node, which may be null is the node set is empty.
+// result: existing xPathResult to use for the results. null is the most common and will create a new XPathResult.
 
 if (element != null) {
   element.click();
