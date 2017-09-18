@@ -35,6 +35,8 @@
 
 <script>
 
+var element = document.evaluate( '/html/body/app/main-component/div/index-component/div/history-component/div/div[2]/history-list/table/tbody[1]/request-list-item[1]/td[1]/div/div[3]/div[3]/div' ,document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
+
 // document.getElementsByClassName('request-modal-toolbar__status-name');
 
 var waitandReturn = document.getElementsByClassName('ui-icon ui-icon__wnr requests__trip-icon requests__trip-icon--wnr')[0].click();
