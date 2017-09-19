@@ -35,6 +35,19 @@
 
 <script>
 
+// ADMIN Requester Agencies 'Add' Enabled
+var addButton = document.getElementsByClassName('uiButton uiButton--primary uiButton--big')[0];
+
+function checkAddEnabled() {
+	if(addButton.classList.contains('uiButton--disabled') == true) {
+		console.log('disabled')
+	} else {
+		console.log('enabled')
+	}
+}
+
+checkAddEnabled();
+
 // ADMIN Requester Agencies On Credit Hold Active Input vs. Not Active
 document.getElementsByClassName('ui-switch__switcher')[2].click();
 
