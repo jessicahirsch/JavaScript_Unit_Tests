@@ -35,6 +35,19 @@
 
 <script>
 
+// ADMIN On Credit Hold Active Input vs. Not Active
+var onCreditHold = document.getElementsByClassName('ui-inactive-wrapper');
+
+function checkCreditHold() {
+	if(onCreditHold.length == 1) {
+		console.log('inactive')
+	} else {
+		console.log('active')
+	}
+}
+
+checkCreditHold();
+
 // ADMIN Toggle on 'In Service' for Vehicles
 document.getElementsByClassName('ui-switch__switcher')[0].click();
 
