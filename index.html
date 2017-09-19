@@ -34,6 +34,19 @@
 <!-- <div class="list-heeader__title">255 Needs Attention Requests Found</div> -->
 
 <script>
+ 
+// ADMIN 'Add' Disabled and Enabled on Reguester Agency Group
+var addButton = document.getElementsByClassName('uiButton uiButton--primary uiButton--big')[0];
+
+function checkAdd() {
+	if(addButton.classList.contains('uiButton--disabled') == true) {
+		console.log('disabled')
+	} else {
+		console.log('enabled')
+	}
+}
+
+checkAdd();
 
 // ADMIN Requester Agencies 'Add' Enabled
 var addButton = document.getElementsByClassName('uiButton uiButton--primary uiButton--big')[0];
