@@ -38,6 +38,9 @@
 // ADMIN Toggle on 'In Service' for Vehicles
 document.getElementsByClassName('ui-switch__switcher')[0].click();
 
+// ADMIN Toggle on for 'Active?' for Users
+document.getElementsByClassName('ui-switch__switcher')[2].click();
+
 // DISPATCHER Reactivating Cancelled Requests ###
 var element = document.evaluate( '/html/body/app/main-component/div/index-component/div/history-component/div/div[2]/history-list/table/tbody[1]/request-list-item[1]/td[1]/div/div[3]/div[3]/div' ,document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
 // xpath: string representing the path to find the element
