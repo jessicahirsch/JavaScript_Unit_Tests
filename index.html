@@ -35,7 +35,9 @@
 
 <script>
 
-// ADMIN On Credit Hold Active Input vs. Not Active
+// ADMIN Requester Agencies On Credit Hold Active Input vs. Not Active
+document.getElementsByClassName('ui-switch__switcher')[3].click();
+
 var onCreditHold = document.getElementsByClassName('ui-inactive-wrapper');
 
 function checkCreditHold() {
@@ -47,6 +49,36 @@ function checkCreditHold() {
 }
 
 checkCreditHold();
+
+// ADMIN Requester Agencies Add Prefer Non-Model EMT; Check toggle
+document.getElementsByClassName('ui-switch__switcher')[0].click();
+
+var preferNonModelEmt = document.getElementsByClassName('ui-switch__switcher')[0];
+
+function checkPreferNonModelEmt() {
+	if(preferNonModelEmt.classList.contains('ui-switch__switcher--clicked') == true) {
+		console.log('clicked')
+	} else {
+		console.log('not clicked')
+	}
+}
+
+checkPreferNonModelEmt();
+
+// ADMIN Requester Agencies Add No Licensing Required; Check toggle
+document.getElementsByClassName('ui-switch__switcher')[1].click();
+
+var noLicensingReq = document.getElementsByClassName('ui-switch__switcher')[1];
+
+function checkNoLicensingReq() {
+	if(noLicensingReq.classList.contains('ui-switch__switcher--clicked') == true) {
+		console.log('clicked')
+	} else {
+		console.log('not clicked')
+	}
+}
+
+checkNoLicensingReq();
 
 // ADMIN Toggle on 'In Service' for Vehicles
 document.getElementsByClassName('ui-switch__switcher')[0].click();
