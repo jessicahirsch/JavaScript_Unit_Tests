@@ -267,7 +267,20 @@ function addDisabled() {
 
 addDisabled();
 
+// ADMIN EMS Facilities Active Toggle On
 var activeToggle = document.getElementsByClassName('uiSwitch__contents uiSwitch__switcher uiSwitch__switcher--clicked').length
+
+function checkActiveOn() {
+	if(activeToggle !== 50) {
+		console.log('Fail')
+	} else {
+		console.log('Pass')
+	}
+}
+
+checkActiveOn();
+
+var activeToggle = document.getElementsByClassName('ui-switch__switcher ui-switch__switcher--clicked').length
 
 function checkActiveOn() {
 	if(activeToggle !== 50) {
