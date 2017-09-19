@@ -41,7 +41,7 @@ document.getElementsByClassName('ui-switch__switcher')[0].click();
 // ADMIN Toggle on for 'Active?' for Users
 document.getElementsByClassName('ui-switch__switcher')[2].click();
 
-// ADMIN Toggle all in new Facility modal
+// ADMIN Toggle Under Contract in Facility modal
 var underContract = document.getElementsByClassName('ui-switch__switcher')[33];
 
 function checkContract() {
@@ -53,6 +53,19 @@ function checkContract() {
 }
 
 checkContract();
+
+// ADMIN Toggle Still active in Facility modal
+var stillActive = document.getElementsByClassName('ui-switch__switcher')[34];
+
+function checkStillActive() {
+	if(stillActive.classList.contains('ui-switch__switcher--clicked') == true) {
+		console.log('clicked')
+	} else {
+		console.log('not clicked')
+	}
+}
+
+checkStillActive();
 
 // DISPATCHER Reactivating Cancelled Requests ###
 var element = document.evaluate( '/html/body/app/main-component/div/index-component/div/history-component/div/div[2]/history-list/table/tbody[1]/request-list-item[1]/td[1]/div/div[3]/div[3]/div' ,document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue;
