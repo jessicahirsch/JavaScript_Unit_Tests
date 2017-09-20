@@ -35,6 +35,33 @@
 
 <script>
 
+function checkClass() {
+	if ($(".resident-list__deactivated")[0]) {
+		console.log('exists') 
+	} else {
+    	console.log('does not exist')
+	}
+}
+
+checkClass();
+
+function checkIfClassExists() {
+	if(typeof class_a === 'resident-list__deactivated') {
+		console.log('exists')
+	} else {
+		console.log('does not exist')
+	}
+}
+
+checkIfClassExists();
+
+document.getElementsByClassName('ui-table__wrapper-element ui-table__wrapper-element--striped ui-table__wrapper-element--no-cursor')[0].innerHTML;
+document.getElementsByClassName('ui-table__element');
+
+function checkDeactivatedAt() {
+	if()
+}
+
 // DISPATCHER Reactivate Cancelled Requests
 var $string = $('div.requests__trip-status').innerText
 var waitAndReturn = $string.includes('W & R');
