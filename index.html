@@ -35,6 +35,18 @@
 
 <script>
 
+var saveForLater = document.getElementsByClassName('uk-button uk-button-small uk-width-1-1 n-btn-secondary')[0];
+
+function checkSave() {
+	if(saveForLater.hasAttribute('disabled') == true) {
+		console.log('disabled')
+	} else {
+		console.log('enabled')
+	}
+}
+
+checkSave();
+
 // NYD DMH User No Requester Agency, PTO # Required, No Caller Information Required
 var next = document.getElementsByClassName('uk-button uk-button-small uk-button-primary uk-width-1-2 n-btn-primary')[0];
 
