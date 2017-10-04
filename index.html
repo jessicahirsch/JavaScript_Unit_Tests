@@ -1209,6 +1209,17 @@ closeDriverWillNotWait();
 // }
 
 // console.log('true');
+
+// JQUERY SAME WINDOW CODE
+
+var a = document.getElementsByTagName("a")
+for (i=0;i<a.length;i++) { 
+    if (a[i].target=="_blank") {
+        a[i].target="_self"
+    }
+}
+callback(true);
+
 </script>
 
 </body>
