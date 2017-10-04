@@ -516,6 +516,29 @@ function clickRequest() {
 
 clickRequest();
 
+var successTrip = document.getElementsByClassName('n-request-status-icon');
+
+function clickRequest() {
+	if ((successTrip.length >= 1) == true) {
+		successTrip[0].click();
+	} else {
+		console.log('do nothing')
+	}
+}
+
+clickRequest();
+
+var successfulTrip = document.getElementsByClassName('n-status-indicator n-status-success ng-scope');
+
+function findSuccessTrip() {
+	if(successfulTrip[0].innerText == ' COMPLETED') {
+		successfulTrip[0].click()
+	} else {
+		console.log('do nothing')
+	}
+}
+findSuccessTrip();
+
 var request = document.getElementsByClassName('n-request-view-widget').length;
 var requestOpen = document.getElementsByClassName('n-request-view-widget');
 
