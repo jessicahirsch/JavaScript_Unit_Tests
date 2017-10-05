@@ -1233,6 +1233,20 @@ closeDriverWillNotWait();
 
 // console.log('true');
 
+// Toggle Tooltip Attempt
+
+var tooltip = document.getElementById('check-unit-no');
+
+function checkTooltip() {
+	if(document.getElementById('check-unit-no').checked) {
+		callback(true);
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkTooltip();
+
 // JQUERY SAME WINDOW CODE
 
 var a = document.getElementsByTagName("a")
