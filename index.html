@@ -1257,6 +1257,14 @@ for (i=0;i<a.length;i++) {
 }
 callback(true);
 
+// ADD ATTACHMENTS
+
+var parent = document.querySelector("input[type=file]").closest('label');
+parent.style.width="auto";
+parent.style.height="auto";
+parent.style.visibility='visible';
+callback(true);
+
 </script>
 
 </body>
