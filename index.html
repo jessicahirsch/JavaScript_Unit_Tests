@@ -35,6 +35,20 @@
 
 <script>
 
+// Check if Bariatric is checked or unchecked
+
+var bariatric = document.getElementById('Bariatric');
+
+function checkBariatricChecked() {
+	if(bariatric.classList.contains('ng-not-empty') == true) {
+		console.log('checked - Failed')
+	} else {
+		console.log('unchecked - Pass')
+	}
+}
+
+checkBariatricChecked();
+
 var saveForLater = document.getElementsByClassName('uk-button uk-button-small uk-width-1-1 n-btn-secondary')[0];
 
 function checkSave() {
