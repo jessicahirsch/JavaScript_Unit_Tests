@@ -37,6 +37,36 @@
 
 <script>
 
+// Check for Searched Active Driver
+
+var drivers = document.getElementsByClassName('drivers__unit-id');
+
+function checkSearchedDriver() {
+	for(var i = 0; i < drivers.length; i++) {
+		if(drivers[i].innerHTML !== "100") {
+			console.log('error')
+		} else {
+			console.log('correct')
+		}
+	}
+}
+
+checkSearchedDriver();
+
+var drivers = document.getElementsByClassName('drivers__unit-id');
+
+function checkSearchedDriver() {
+	for(var i = 0; i < drivers.length; i++) {
+		if(drivers[i].innerHTML !== "100") {
+			callback("Failed!")
+		} else {
+			callback(true)
+		}
+	}
+}
+
+checkSearchedDriver();
+
 // Check if Bariatric is checked or unchecked
 
 var bariatric = document.getElementById('Bariatric');
