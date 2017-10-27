@@ -37,6 +37,34 @@
 
 <script>
 
+// EMS Facility Toggle Test
+
+var toggle = document.getElementsByClassName('ui-switch__switcher');
+
+function checkToggle() {
+	if(toggle[49].classList.contains('ui-switch__switcher--clicked') == true) {
+		console.log('toggled on')
+	} else {
+		console.log('toggled off')
+	}
+}
+
+checkToggle();
+
+var toggle = document.getElementsByClassName('ui-switch__switcher');
+
+function checkToggle() {
+	if(toggle[49].classList.contains('ui-switch__switcher--clicked') == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkToggle();
+
+document.getElementsByClassName('ui-switch__switcher')[49];
+
 // Check for Searched Active Driver
 
 var drivers = document.getElementsByClassName('drivers__unit-id');
