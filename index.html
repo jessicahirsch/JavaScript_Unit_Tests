@@ -37,6 +37,66 @@
 
 <script>
 
+// Check Toggles for Requester Agency
+
+document.getElementsByClassName('ui-table__wrapper-element ui-table__wrapper-element--striped ui-table__wrapper-element--hover')[46].click();
+
+document.getElementsByClassName('ui-switch__switcher')[0].click();
+
+var preferNonModelEmt = document.getElementsByClassName('ui-switch__switcher')[0];
+
+function checkToggleOn() {
+	if(preferNonModelEmt.classList.contains('ui-switch__switcher--clicked') == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkToggleOn();
+
+function checkToggleOn() {
+	if(preferNonModelEmt.classList.contains('ui-switch__switcher--clicked') == true) {
+		console.log('clicked')
+	} else {
+		console.log('not clicked')
+	}
+}
+
+checkToggleOn();
+
+// Check that Deactivated Residents have 'Deactivate' Button
+
+var deactivatedResidents = document.getElementsByClassName('ui-table__small-text');
+
+var deactivateSection = document.getElementsByClassName('ui-table__element ui-table__element--center');
+
+var residents = document.getElementsByClassName('ui-table__element ui-table__element--bold');
+
+var deactivateButton = document.getElementsByClassName('uiButton uiButton--primary uiButton--small');
+
+// (document.getElementsByClassName('ui-table__small-text')[i].innerText == 'Deactivated at') == true;
+
+// function loopDeactivateSection() {
+// 	for (var i = 0; i < deactivateSection.length; i++) {
+// 		console.log(residents[i].innerText)
+// 	}
+// }
+
+// loopDeactivateSection();
+
+function checkDeactivatedAt() {
+	for(var i = 0; i < residents.length; i++) {
+		if(deactivatedResidents.length = 1 && deactivateButton.length = 1) {
+			console.log('all good')
+		} else {
+			console.log('not all good')
+		}
+	}
+}
+
+checkDeactivatedAt();
+
 // EMS Facility Toggle Test
 
 var toggle = document.getElementsByClassName('ui-switch__switcher');
