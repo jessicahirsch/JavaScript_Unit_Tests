@@ -1,0 +1,31 @@
+    .menu-dropdown
+        background #004053
+        padding 10px     
+        border-radius 0 0 4px 4px
+        cursor pointer
+
+    .uiDropdown-wrapper--open
+        background #004053
+        padding 10px     
+        border-radius 0 0 4px 4px
+        cursor pointer
+
+    .menu__icon menu__icon--vehicles
+        cursor pointer
+
+    .uiDropdown-wrapper__element
+        padding 10px
+        color primaryNavy
+        font-size 12px
+        padding 11px 10px
+        background #fff
+        cursor pointer
+        border-top: 1px solid #b7c5ce
+
+    ul.uiDropdown-wrapper
+        border-radius 0 0 4px 4px
+
+      <div class="header__element header__element--right">
+      <ul class="menu">
+          <li class="menu__element menu__element--border"><a href="" class="menu__link" routerLink="/requester-agency" routerLinkActive="menu__link--active">Requester Agencies</a></li>
+          <li class="menu__element menu__element--border"><a href="" class="menu__link" routerLink="/requester-agency-group" routerLinkActive="menu__link--active">Requester Agency Group</a></li>

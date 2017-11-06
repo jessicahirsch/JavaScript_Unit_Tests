@@ -37,6 +37,30 @@
 
 <script>
 
+// Requester Agency On Credit Hold Toggle Check
+
+var onCreditHold = document.getElementsByClassName('ui-inactive-wrapper');
+
+function checkOnCreditHold() {
+	if(onCreditHold.length == 1) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkOnCreditHold();
+
+function checkOnCreditHold() {
+	if(onCreditHold.length == 1) {
+		console.log('toggled off')
+	} else {
+		console.log('toggled on')
+	}
+}
+
+checkOnCreditHold();
+
 // Check Toggles for Requester Agency
 
 document.getElementsByClassName('ui-table__wrapper-element ui-table__wrapper-element--striped ui-table__wrapper-element--hover')[46].click();
@@ -64,6 +88,20 @@ function checkToggleOn() {
 }
 
 checkToggleOn();
+
+document.getElementsByClassName('ui-switch__switcher')[4].click();
+
+var patientInformationRequired = document.getElementsByClassName('ui-switch__switcher')[4];
+
+function checkPatientInformationRequired() {
+	if((patientInformationRequired).classList.contains('ui-switch__switcher--clicked') == true) {
+		console.log('clicked')
+	} else {
+		console.log('not clicked')
+	}
+}
+
+checkPatientInformationRequired();
 
 // Check that Deactivated Residents have 'Deactivate' Button
 
