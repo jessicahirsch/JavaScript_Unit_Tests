@@ -37,6 +37,23 @@
 
 <script>
 
+// New W&R Search in Dispatch
+
+var wAndRCheck = document.getElementsByClassName('ui-text ui-text--small ui-text--gray');
+
+function checkForWAndR() {
+	for (var i = 0; i < wAndRCheck.lenght; i++) {
+		if ((wAndRCheck[i].indexOf("/") > 0) == true) {
+		console.log(true)
+	} else {
+		console.log("Failed!");
+	}
+}
+
+checkForWAndR();
+
+// Show All Users Role JavaScript Test Refactor
+
 // Requester Agency On Credit Hold Toggle Check
 
 var onCreditHold = document.getElementsByClassName('ui-inactive-wrapper');
