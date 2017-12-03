@@ -42,11 +42,24 @@
 var wAndRCheck = document.getElementsByClassName('ui-text ui-text--small ui-text--gray');
 
 function checkForWAndR() {
-	for (var i = 0; i < wAndRCheck.lenght; i++) {
-		if ((wAndRCheck[i].indexOf("/") > 0) == true) {
-		console.log(true)
+	for (var i = 0; i < wAndRCheck.length; i++) {
+		if ((wAndRCheck.indexOf("/") > 0) == true) {
+			console.log(true)
+		} else {
+			console.log("Failed!");
+		}
+	}
+}
+
+checkForWAndR();
+
+var wAndRCheck = document.getElementsByClassName('ui-text ui-text--small ui-text--gray');
+
+function checkForWAndR() {
+	if(wAndRCheck.length >= 1) {
+		wAndRCheck[0].click()
 	} else {
-		console.log("Failed!");
+		console.log('do nothing')
 	}
 }
 
