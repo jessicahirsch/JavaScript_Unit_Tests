@@ -41,7 +41,7 @@ serviceType = document.getElementsByClassName('n-service-types')[70];
 female = serviceType.getElementsByTagName('span')[2];
 
 function femaleServiceType() {
-	if(female.innerHTML.contains('Female Attendant Required') == true) {
+	if(document.getElementsByClassName('ng-scope')[1060].innerHTML.contains('Female Attendant Required') == true) {
 		callback(true)
 	} else {
 		callback("Failed!")
