@@ -37,6 +37,257 @@
 
 <script>
 
+serviceType = document.getElementsByClassName('n-service-types')[70];
+female = serviceType.getElementsByTagName('span')[2];
+
+function femaleServiceType() {
+	if(female.innerHTML.contains('Female Attendant Required') == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+femaleServiceType();
+
+var female = document.getElementById('female-gender-required');
+
+function checkFemaleAttendant() {
+	if((female.checked) == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkFemaleAttendant();
+
+function checkAssignADriver() {
+	if(document.getElementsByClassName('n-emt-assign ng-scope').length >= 1) {
+		callback("Failed!")
+	} else {
+		callback("true")
+	}
+}
+
+checkAssignADriver();
+
+function checkAssign() {
+	if(document.getElementsByClassName('uk-button n-btn-primary n-details-assign-button uk-display-inline-block ng-binding ng-scope').length > 0) {
+		callback("Failed!")
+	} else {
+		callback("true")
+	}
+}
+
+checkAssign();
+
+function checkAssign() {
+	if(document.getElementsByClassName('uk-button n-btn-primary n-details-assign-button uk-display-inline-block ng-binding ng-scope').length > 0) {
+		console.log("Failed!")
+	} else {
+		console.log("true")
+	}
+}
+
+checkAssign();
+
+var etaInput = document.getElementsByClassName('uk-width-3-4 ng-pristine ng-untouched ng-valid ng-empty')[1];
+
+function checkNumerics() {
+	if((etaInput).value == ' ') {
+		console.log("empty")
+	} else {
+		console.log("not empty")
+	}
+}
+
+checkNumerics();
+
+// Get Service Type in Web Requester
+var serviceType = document.getElementsByClassName('n-service-types')[30];
+
+function serviceTypeCheck() {
+	if((serviceType.getElementsByClassName('ng-binding')[0].innerText == 'ALS') && serviceType.getElementsByClassName('ng-scope')[0].innerHTML.contains('Bariatric')) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+serviceTypeCheck();
+
+var serviceType = document.getElementsByClassName('n-service-types')[30];
+
+function serviceTypeCheck() {
+	if((serviceType.getElementsByClassName('ng-binding')[0].innerText == 'ALS') && serviceType.getElementsByClassName('ng-scope')[0].innerHTML.contains('Bariatric')) {
+		console.log('true')
+	} else {
+		console.log("Failed!")
+	}
+}
+
+serviceTypeCheck();
+
+// 'Assign' Click
+document.getElementsByClassName('uk-button n-btn-primary n-details-assign-button uk-display-inline-block ng-binding ng-scope')[0].click();
+
+// Check Pickup Instructions ("Testing Testing")
+document.getElementsByClassName('n-comment-block ng-binding')[0].innerHTML.contains('Testing Testing');
+
+// Check W&R Time (70 Mins)
+document.getElementsByClassName('n-form-group uk-grid uk-grid-collapse')[3].innerHTML.contains('Est. wait time at destination: 70 mins');
+
+var status = document.getElementsByClassName('n-status-primary ng-scope')[3];
+
+function checkPreScheduled() {
+	if(document.getElementsByClassName('n-status-primary ng-scope')[3].innerHTML.contains('PRE-SCHEDULED') == true){
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkPreScheduled();
+
+var reqField = document.getElementsByClassName('n-low-highlight');
+
+function checkReqAgency() {
+	if(reqField[0].innerHTML.contains('Requesting Agency') == true) {
+		callback("Failed!")
+	} else {
+		callback(true)
+	}
+}
+
+checkReqAgency();
+
+var units = document.getElementsByClassName('n-unit-cell');
+
+function checkEmts() {
+	for(var i = 0; i < units.length; i++) {
+		if(units[i].innerText.contains('100') == true) {
+			console.log('unit showing - okay')
+		} else {
+			console.log('unit not showing')
+		}
+	}
+}
+
+checkEmts();
+
+var units = document.getElementsByClassName('n-unit-cell');
+
+function checkEmts() {
+	for(var i = 0; i < units.length; i++) {
+		if(units[i].innerText.contains('100') == true) {
+			callback(true)
+		} else {
+			callback("Failed!")
+		}
+	}
+}
+
+checkEmts();
+
+function checkAllStations() {
+	if(document.getElementById('assign_driver_facility_01').classList.contains('ng-not-empty') && document.getElementById('assign_driver_facility_02').classList.contains('ng-not-empty') && document.getElementById('assign_driver_facility_03').classList.contains('ng-not-empty') == true) {
+		console.log('all checked')
+	} else {
+		console.log('at least one unchecked')
+	}
+}
+
+checkAllStations();
+
+function checkAllStations() {
+	if(document.getElementById('assign_driver_facility_01').classList.contains('ng-not-empty') && document.getElementById('assign_driver_facility_02').classList.contains('ng-not-empty') && document.getElementById('assign_driver_facility_03').classList.contains('ng-not-empty') == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkAllStations();
+
+document.getElementById('assign_driver_facility_01').classList.contains('ng-not-empty');
+
+var dateTimeError = document.getElementsByClassName('uk-margin-small-top uk-text-center n-text-error-highlight uk-text-small');
+
+function checkDateTimeError() {
+	if(dateTimeError[1].classList.contains('ng-hide') == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkDateTimeError();
+
+x = document.getElementsByClassName('ng-scope')[257]
+
+function checkDateTimeError() {
+	if(x.innerHTML[33] + x.innerHTML[34] + x.innerHTML[35] + x.innerHTML[36] + x.innerHTML[37] + x.innerHTML[38] == "Pickup") {
+		console.log("Failed")
+	} else {
+		console.log("Pass")
+	}
+}
+
+checkDateTimeError();
+
+x = document.getElementsByClassName('uk-button uk-button-small n-request-mode-button uk-width-1-3 uk-active');
+
+function selectPickupLater() {
+	x[0].click();
+}
+
+selectPickupLater();
+
+x = document.getElementsByClassName('ui-table__cell needs-attention__cell needs-attention__cell--time');
+
+function scanUnitRequests() {
+	for(var i = 0; i < x.length; i++) {
+		if((document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[82] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[83] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[84]) == "110") {
+	callback(true)
+} else {
+	callback("Failed!")
+}
+	}
+}
+
+scanUnitRequests();
+
+x = document.getElementsByClassName('ui-table__cell needs-attention__cell needs-attention__cell--time');
+
+function scanUnitRequests() {
+	for(var i = 0; i < x.length; i++) {
+		if((document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[82] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[83] + document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[i].innerHTML[84]) == "110") {
+	console.log("true")
+} else {
+	console.log("Failed!")
+}
+	}
+}
+
+scanUnitRequests();
+
+document.getElementsByClassName('requests__unit-element requests__unit-element--facility')[0].innerHTML[82]
+
+// Find Completed Trip in New Dispatch Panel
+
+var status = document.getElementsByClassName('ui-text ui-text--bold')[0].innerHTML
+
+function selectCompleted() {
+	if((status.indexOf('Completed') > 0) == true) {
+		console.log('there is a completed request on this page')
+	} else {
+		console.log('there is not a completed request on this page')
+	}
+}
+
+selectCompleted();
+
 // New W&R Search in Dispatch
 
 var wAndRCheck = document.getElementsByClassName('ui-text ui-text--small ui-text--gray');
@@ -217,6 +468,36 @@ function checkSearchedDriver() {
 			callback("Failed!")
 		} else {
 			callback(true)
+		}
+	}
+}
+
+checkSearchedDriver();
+
+var status = document.getElementsByClassName('requests__trip-status');
+
+function checkSearchedDriver() {
+	for(var i = 0; i < status.length; i++) {
+		if(drivers[i].innerHTML !== "Turndown") {
+			callback("Failed!")
+		} else {
+			callback(true)
+		}
+	}
+}
+
+checkSearchedDriver();
+
+document.getElementsByClassName('requests__trip-status')[0].indexOf("Turndown");
+
+var status = document.getElementsByClassName('requests__trip-status');
+
+function checkSearchedDriver() {
+	for(var i = 0; i < status.length; i++) {
+		if(status[i].innerHTML == "Turndown") {
+			console.log("true")
+		} else {
+			console.log("failed")
 		}
 	}
 }
