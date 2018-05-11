@@ -1,4 +1,4 @@
 # javascript_tests
 
 
-JavaScript Unit tests built in automation tool for Ambulnz.
+JavaScript Unit tests built into Automation Tool, UseTrace for Ambulnz.
