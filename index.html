@@ -24,6 +24,7 @@ f<!DOCTYPE html>
 
 // Julia's Tests
 wrTrips = Array.from(document.querySelectorAll("request-list-item")).filter(t => t.querySelector(".requests__trip-number").innerText.length > 5);
+// From th array of rqusts, filtr out th rqusts with trip numbrs that hav gratr than 5 charactrs
 
 returnTrip = wrTrips.find(t => {
   return t.querySelector(".requests__trip-number .ui-text--gray").innerText.includes(GLOBALS.trip)
