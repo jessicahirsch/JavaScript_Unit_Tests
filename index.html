@@ -22,6 +22,42 @@ f<!DOCTYPE html>
 
 <script>
 
+document.getElementsByClassName("ui-dropdown-wrapper ui-dropdown-wrapper--bottom ui-dropdown-wrapper--open")[0].outerText.indexOf("CREATED")
+
+document.getElementsByClassName("form.ui-tag-search__form ng-valid ng-dirty ng-touched").value = "status"
+
+document.getElementsByClassName("ui-dropdown-wrapper ui-dropdown-wrapper--bottom ui-dropdown-wrapper--open")
+
+
+function checkTripNotes() {
+	if(document.getElementsByClassName('ui-input-group__textarea ng-pristine ng-valid ng-touched')[0].value == "Requesting Agency: DMH - Department of Mental Health
+	Caller First Name: Jane
+	Caller Last Name: Smith
+	Caller Phone: (123) 456-7890
+	Patient First Name: Coverage
+	Patient Middle Name: Data
+	Patient Last Name: Check
+	Patient Birthday: 1/1/2000
+	Chief Complaint: Animal Bite
+	Primary Insurance Provider: Blue Cross of CA
+	Policy Number: 692436
+	Authorization Number: 13179606") {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+checkTripNotes();
+
+function checkRt() {
+	if(document.querySelector('#isRespiratoryTherapistRequired').checked == true) {
+		console.log("RT is checked.")
+	} else {
+		console.log("RT is unchecked.")
+	}
+}
+
+checkRt();
+
 // Julia's Tests
 wrTrips = Array.from(document.querySelectorAll("request-list-item")).filter(t => t.querySelector(".requests__trip-number").innerText.length > 5);
 // From th array of rqusts, filtr out th rqusts with trip numbrs that hav gratr than 5 charactrs
