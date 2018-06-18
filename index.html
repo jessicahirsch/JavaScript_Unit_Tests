@@ -22,6 +22,38 @@ f<!DOCTYPE html>
 
 <script>
 
+function checkWillCallSelected() {
+	if(document.getElementsByClassName("ui-input-group__textarea ng-pristine ng-valid ng-touched")[0].value == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkWillCallSelected();
+
+function checkWillCallSelected() {
+	if(document.getElementsByClassName("request-eta__status-element request-eta__status-element--willcall")[0].classList.contains("request-eta__status-element--willcall") == true) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkWillCallSelected();
+
+function checkWillCallNotes() {
+	let notes = document.getElementsByClassName("ui-input-group__textarea ng-valid ng-touched ng-dirty xh-highlight")[0].value;
+	let re = new RegExp('Will Call');
+	if(notes.match(re)[0] == "Will Call") {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkWillCallNotes();
+
 // Verify all required fields are filled
 function verifyRequiredFields() {
   let requiredFields = Array.from(document.querySelectorAll("input")).filter(i => i.required);
@@ -35,6 +67,15 @@ verifyRequiredFields();
 function checkRedText() {
 	let requester = document.getElementById("RequesterPanel").children[0].childNodes[0].children[1];
 	let textColor = window.getComputedStyle(requester, null).getPropertyValue('color');
+	callback(textColor == "rgb(244, 67, 54)" || 'Failed!');
+}
+
+checkRedText();
+
+// Check Destination Missing
+function checkRedText() {
+	let destination = document.getElementById("PickupDestinationPanel").children[0].childNodes[0].children[1].children[0].children[2].children[0];
+	let textColor = window.getComputedStyle(destination, null).getPropertyValue('color');
 	callback(textColor == "rgb(244, 67, 54)" || 'Failed!');
 }
 
