@@ -65,8 +65,8 @@ function verifyRequiredFields() {
 verifyRequiredFields();
 
 function checkRedText() {
-	let requester = document.getElementById("RequesterPanel").children[0].childNodes[0].children[1];
-	let textColor = window.getComputedStyle(requester, null).getPropertyValue('color');
+	let chiefComplaint = document.getElementById('ChiefComplaintPanel').children[0].children[0].children[1];
+	let textColor = window.getComputedStyle(chiefComplaint, null).getPropertyValue('color');
 	callback(textColor == "rgb(244, 67, 54)" || 'Failed!');
 }
 
@@ -83,8 +83,8 @@ checkRedText();
 
 
 function checkRedUnderline() {
-  let dropoff = document.getElementById("destination-input");
-  let underlineColor = window.getComputedStyle(dropoff.parentElement,'after').getPropertyValue('background-color');
+  let chiefComplaint = document.getElementById("ChiefComplaintSelect");
+  let underlineColor = window.getComputedStyle(chiefComplaint.parentElement.parentElement.parentElement.children[1],'after').getPropertyValue('background-color');
   callback(underlineColor == "rgb(244, 67, 54)" || 'Failed!');
 }
 
