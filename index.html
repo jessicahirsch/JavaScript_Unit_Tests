@@ -8,7 +8,7 @@ f<!DOCTYPE html>
 </head>
 <body>
 
-<p id="demo"></p>
+<p id="demo"></p>-------
 
 <button id="myBtn">My Button</button>
 <button id="myBtn">My Button</button>
@@ -21,6 +21,53 @@ f<!DOCTYPE html>
 <button class="files__remove" />
 
 <script>
+
+// Verify all required fields are filled
+function verifyRequiredFields() {
+  let requiredFields = Array.from(document.querySelectorAll("input")).filter(i => i.required);
+  let notFilled = requiredFields.filter(i => !i.value).map(i => i.getAttribute("name") || i.getAttribute("id"))
+  notFilled = notFilled.filter(i => !i.includes('secondary') && !i.includes('policy'));
+  callback(notFilled.length == 1);
+}
+
+verifyRequiredFields();
+
+function checkRedText() {
+	let requester = document.getElementById("RequesterPanel").children[0].childNodes[0].children[1];
+	let textColor = window.getComputedStyle(requester, null).getPropertyValue('color');
+	callback(textColor == "rgb(244, 67, 54)" || 'Failed!');
+}
+
+checkRedText();
+
+
+function checkRedUnderline() {
+  let dropoff = document.getElementById("destination-input");
+  let underlineColor = window.getComputedStyle(dropoff.parentElement,'after').getPropertyValue('background-color');
+  callback(underlineColor == "rgb(244, 67, 54)" || 'Failed!');
+}
+
+checkRedUnderline();
+
+function checkMissing() {
+	if(document.getElementById('PickupDestinationPanel').children[0].innerText.indexOf("missing") == 16) {
+		callback(true)
+	} else {
+		callback("Failed! No validation")
+	}
+}
+
+function checkMissing() {
+	if(document.getElementById('PickupDestinationPanel').children[0].innerText.indexOf("missing") == 68) {
+		callback(true)
+	} else {
+		callback("Failed! No validation")
+	}
+}
+
+checkMissing();
+
+document.getElementById('PickupDestinationPanel').children[0].innerText.indexOf("missing") == 68
 
 document.getElementsByClassName("ui-dropdown-wrapper ui-dropdown-wrapper--bottom ui-dropdown-wrapper--open")[0]
 
