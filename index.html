@@ -54,6 +54,16 @@ function checkWillCallNotes() {
 
 checkWillCallNotes();
 
+function checkStatus() {
+	if(document.getElementsByClassName("request-modal-toolbar__status-name")[0].innerText.indexOf("Cancelled") !== -1) {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+checkStatus();
+
 // Verify all required fields are filled
 function verifyRequiredFields() {
   let requiredFields = Array.from(document.querySelectorAll("input")).filter(i => i.required);
