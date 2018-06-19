@@ -22,15 +22,39 @@ f<!DOCTYPE html>
 
 <script>
 
-function checkWillCallSelected() {
-	if(document.getElementsByClassName("ui-input-group__textarea ng-pristine ng-valid ng-touched")[0].value == true) {
+function tripPopulation() {
+	let trips = Array.from(document.getElementsByClassName("ui-link ui-link--hoverable")).map(t => t.innerText);
+	let isTripInResults = !!trips.find(t => t == GLOBALS.trip)
+	if(isTripInResults !== true) {
+		callback(true)
+	} else {
+		callback("`Failed! Trip ${GLOBALS.trip} is in results is not desired behavior`")
+	}
+}
+
+tripPopulation();
+
+console.log(isTripInResults);
+
+function checkEtaRejected() {
+	if(document.querySelectorAll("li")[1].children[0].innerText == "ETA Rejected") {
 		callback(true)
 	} else {
 		callback("Failed!")
 	}
 }
 
-checkWillCallSelected();
+checkEtaRejected();
+
+function turndownSavedModal() {
+	if(document.getElementById("message-id").innerText == "Turndown Saved") {
+		callback(true)
+	} else {
+		callback("Failed!")
+	}
+}
+
+turndownSavedModal();
 
 function checkWillCallSelected() {
 	if(document.getElementsByClassName("request-eta__status-element request-eta__status-element--willcall")[0].classList.contains("request-eta__status-element--willcall") == true) {
