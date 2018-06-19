@@ -118,6 +118,16 @@ function checkMissing() {
 
 checkMissing();
 
+function checkRejectedStatus() {
+	if(document.querySelectorAll("li")[1].children[0].innerText == "ETA Rejected") {
+		console.log(true)
+	} else {
+		console.log("Failed! Trip is ETA Rejected")
+	}
+}
+
+checkRejectedStatus();
+
 document.getElementById('PickupDestinationPanel').children[0].innerText.indexOf("missing") == 68
 
 document.getElementsByClassName("ui-dropdown-wrapper ui-dropdown-wrapper--bottom ui-dropdown-wrapper--open")[0]
