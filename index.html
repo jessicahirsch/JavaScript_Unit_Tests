@@ -22,6 +22,10 @@ f<!DOCTYPE html>
 
 <script>
 
+let tripBanner = Array.from(document.querySelectorAll("span")).filter(text => text.innerText.includes("Trip: #" + trip + " | Ambulnz Unit:"));
+shareLink = tripBanner[0].nextElementSibling;
+
+
 // Find all vehicle tooltips
 document.getElementsByClassName("n-map-pin-unit-no-ext")[0].innerText
 
