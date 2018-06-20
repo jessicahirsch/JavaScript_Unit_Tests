@@ -22,6 +22,17 @@ f<!DOCTYPE html>
 
 <script>
 
+// Find all vehicle tooltips
+document.getElementsByClassName("n-map-pin-unit-no-ext")[0].innerText
+
+//Julia's code: Array.from find all text
+let list =  Array.from(document.querySelectorAll("ul[role='listbox'] > li"));
+let twoHours = list.find(t => t.innerText.includes("2h"));
+twoHours.click();
+
+// Click On Scene Button
+document.getElementById("select-currency").parentElement.children[0].click();
+
 function tripPopulation() {
 	let trips = Array.from(document.getElementsByClassName("ui-link ui-link--hoverable")).map(t => t.innerText);
 	let isTripInResults = !!trips.find(t => t == GLOBALS.trip)
