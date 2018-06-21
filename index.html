@@ -22,19 +22,19 @@
 
 <script>
 
+window.location.href = "https://static-assets.ambulnz-dev.com/requester/qa/#/";
+callback(true);
+
 document.querySelector("header").children[0].children[1].children[0].children[0].children[0].children[1].click();
 
 // Corrected filter method to find available units
 // Doing this by taking all units, filtering by class lists containing "locked" standard and creating a new array with elements that *do not* contain locked class
-let availableUnits = Array.from(document.getElementsByClassName("n-map-pin-unit-no-ext")).filter(i => !i.classList.contains("n-shift-locked"));
-let yesUnits = Array.from(availableUnits).filter(i => !i.classList.contains("n-lost"));
-let firstAvailableUnit = availableUnits[1].innerText;
+let shiftUnlockedUnits = Array.from(document.getElementsByClassName("n-map-pin-unit-no-ext")).filter(i => !i.classList.contains("n-shift-locked"));
+let connectedUnits = Array.from(shiftUnlockedUnits).filter(i => !i.classList.contains("n-lost"));
+let unlockedUnits = Array.from(connectedUnits).filter(i => !i.classList.contains("n-locked"));
+let firstAvailableUnit = unlockedUnits[1].innerText;
 let unitNum = firstAvailableUnit.slice(0, 3);
 GLOBALS.unitNum = unitNum;
-
-function checkLocks(lock) {
-    return lock = document.getElementById("ageToCheck").value;
-}
 
 let badUnits = [];
 let units = [];
@@ -50,7 +50,7 @@ function filterUnits() {
 filterUnits();
 
 let tripBanner = Array.from(document.querySelectorAll("span")).filter(text => text.innerText.includes("Trip: #" + trip + " | Ambulnz Unit:"));
-shareLink = tripBanner[0].nextElementSibling;
+shareLink = tripBanner[1].nextElementSibling;
 shareLink.children[0];
 
 // Find all vehicle tooltips
