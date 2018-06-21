@@ -22,6 +22,27 @@
 
 <script>
 
+// Corrected filter method to find available units
+// Doing this by taking all units, filtering by class lists containing "locked" standard and creating a new array with elements that *do not* contain locked class
+let availableUnits = Array.from(document.getElementsByClassName("n-map-pin-unit-no-ext")).filter(i => !i.classList.contains("n-shift-locked"))
+
+function checkLocks(lock) {
+    return lock = document.getElementById("ageToCheck").value;
+}
+
+let badUnits = [];
+let units = [];
+
+function filterUnits() {
+	for(var i = 0; i < i.length; i++) {
+		let units = Array.from(document.getElementsByClassName("n-map-pin-unit-no-ext")).filter(document.getElementsByClassName("n-map-pin-unit-no-ext."n-shift-locked"")) {
+			if(firstUnit.classList.contains("n-shift-locked"))
+		}
+	}
+}
+
+filterUnits();
+
 let tripBanner = Array.from(document.querySelectorAll("span")).filter(text => text.innerText.includes("Trip: #" + trip + " | Ambulnz Unit:"));
 shareLink = tripBanner[0].nextElementSibling;
 shareLink.children[0];
