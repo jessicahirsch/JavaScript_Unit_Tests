@@ -1,4 +1,4 @@
-f<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -26,9 +26,8 @@ let tripBanner = Array.from(document.querySelectorAll("span")).filter(text => te
 shareLink = tripBanner[0].nextElementSibling;
 shareLink.children[0];
 
-
 // Find all vehicle tooltips
-document.getElementsByClassName("n-map-pin-unit-no-ext")[0].innerText
+document.querySelectorAll("n-map-pin-unit-no-ext")
 
 //Julia's code: Array.from find all text
 let list =  Array.from(document.querySelectorAll("ul[role='listbox'] > li"));
