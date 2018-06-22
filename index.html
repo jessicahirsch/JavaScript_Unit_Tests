@@ -22,6 +22,20 @@
 
 <script>
 
+https://s3.amazonaws.com/AmbulnzResourcesQa/AmbUser/2156/Screen%20Shot%202018-04-04%20at%207.40.41%20PM.png?AWSAccessKeyId=AKIAJM2OSJI6UGRYWFUA&Expires=1529680567&Signature=%2FViesahUG%2BWgc3FZ1ysMxrW7bY0%3D
+
+let x = document.querySelector("button");
+
+if (x == null) {
+  callback(true);
+}
+else {
+  callback("Failed!");
+}
+
+let hover = new Event("mouseenter");
+document.querySelector(".ui-popover").dispatchEvent(hover);
+
 window.location.href = "https://static-assets.ambulnz-dev.com/requester/qa/#/";
 callback(true);
 
@@ -50,7 +64,7 @@ function filterUnits() {
 filterUnits();
 
 let tripBanner = Array.from(document.querySelectorAll("span")).filter(text => text.innerText.includes("Trip: #" + trip + " | Ambulnz Unit:"));
-shareLink = tripBanner[1].nextElementSibling;
+shareLink = tripBanner[0].nextElementSibling;
 shareLink.children[0];
 
 // Find all vehicle tooltips
