@@ -22,6 +22,7 @@
 
 <script>
 
+// Checking status of trip when it could be any number of statuses
 function checkStatus() {
 	if((document.getElementsByClassName("request-modal-toolbar__status-name")[0].innerText.indexOf("Scheduled") !== -1) || (document.getElementsByClassName("request-modal-toolbar__status-name")[0].innerText.indexOf("Driver Accepted") !== -1) || (document.getElementsByClassName("request-modal-toolbar__status-name")[0].innerText.indexOf("Scheduled") !== -1)) {
 		callback(true)
@@ -34,6 +35,7 @@ checkStatus();
 
 https://s3.amazonaws.com/AmbulnzResourcesQa/AmbUser/2156/Screen%20Shot%202018-04-04%20at%207.40.41%20PM.png?AWSAccessKeyId=AKIAJM2OSJI6UGRYWFUA&Expires=1529680567&Signature=%2FViesahUG%2BWgc3FZ1ysMxrW7bY0%3D
 
+// Check if alter on page renders all other elements == null
 let x = document.querySelector("button");
 
 if (x == null) {
