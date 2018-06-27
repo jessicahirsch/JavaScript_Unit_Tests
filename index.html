@@ -22,6 +22,20 @@
 
 <script>
 
+// get element by xpath
+function getElementByXpath(path) {
+  return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
+
+console.log( getElementByXpath("//html[1]/body[1]/div[1]") );
+//
+
+let hh = parseInt(time.split(":")[0]) % 12;
+hh = hh < 10 ? `0${hh}` : hh;
+let mm = time.split(":")[1];
+time = `${hh}:${mm}`;
+
+
   if (Number(etaCheck[2].substring(0,2)) > 12) {
     etaCheck[2] = (Number(etaCheck[2].substring(0,2)) - 12) + etaCheck[2].substring(2,5);
     etaCheck[2] = parseInt(etaCheck[2]) < 10 ? `0${etaCheck[2]}` : etaCheck[2]; 
@@ -38,6 +52,20 @@ let newEtaCheck = document.getElementsByTagName("h2")[0].textContent.split(" ")[
 function removeZero() {
 	if(newEtaCheck.charAt(0) == 0) {
 		let realETA = newEtaCheck.slice(1);
+		etaCheck.splice(1, 1, realETA)
+	} else {
+		console.log(etaCheck)
+	}
+}
+
+removeZero();
+
+let etaCheck = document.getElementsByTagName("h2")[0].textContent.split(" ");
+GLOBALS.newEtaCheck = document.getElementsByTagName("h2")[0].textContent.split(" ")[1];
+
+function removeZero() {
+	if(newEtaCheck.charAt(0) == 0) {
+		let realETA = GLOBALS.newEtaCheck.slice(1);
 		etaCheck.splice(1, 1, realETA)
 	} else {
 		console.log(etaCheck)
