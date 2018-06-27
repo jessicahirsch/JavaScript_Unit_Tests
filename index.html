@@ -22,6 +22,65 @@
 
 <script>
 
+  if (Number(etaCheck[2].substring(0,2)) > 12) {
+    etaCheck[2] = (Number(etaCheck[2].substring(0,2)) - 12) + etaCheck[2].substring(2,5);
+    etaCheck[2] = parseInt(etaCheck[2]) < 10 ? `0${etaCheck[2]}` : etaCheck[2]; 
+    if (etaCheck[2] !== etaTime) {
+      callback(`Failed! Time ${etaCheck[2]} != ${etaTime}`);
+    }
+  }
+// Comparing time from request header to time on dispatcher page
+  else 
+
+let etaCheck = document.getElementsByTagName("h2")[0].textContent.split(" ");
+let newEtaCheck = document.getElementsByTagName("h2")[0].textContent.split(" ")[1];
+
+function removeZero() {
+	if(newEtaCheck.charAt(0) == 0) {
+		let realETA = newEtaCheck.slice(1);
+		etaCheck.splice(1, 1, realETA)
+	} else {
+		console.log(etaCheck)
+	}
+}
+
+removeZero();
+
+let etaDate = document.getElementsByClassName("scheduledETADate")[0].textContent;
+let etaTime = document.getElementsByClassName("scheduledETATime")[0].textContent;
+let newEtaDate = "";
+let zero = "0";
+
+function addZero() {
+	if(document.getElementsByClassName("scheduledETADate")[0].innerText.charAt(0) == 1) {
+		console.log(etaDate)
+	} else {
+		let newEtaDate = zero.concat(etaDate)
+	}
+}
+
+addZero();
+
+function checkDate() {
+// comparing date from request header to time on dispatcher page
+    if (etaCheck !== etaDate || etaCheck !== newEtaDate) {
+      console.log("Failed");
+   } 
+}
+
+checkDate();
+
+let zero = "0";
+function addZero() {
+	if(document.getElementsByClassName("scheduledETADate")[0].innerText.charAt(0) == 1) {
+		(etaDate)
+	} else {
+		let etaDate = zero.concat(etaDate)
+	}
+}
+
+addZero();
+
 // Saving old ways to find single queried trip
 let trip = trips.find(t => t.querySelector(".requests__trip-number").innerText.length == 5);
 
