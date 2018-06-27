@@ -25,6 +25,8 @@
 // Saving old ways to find single queried trip
 let trip = trips.find(t => t.querySelector(".requests__trip-number").innerText.length == 5);
 
+let etaPMAM = document.querySelector(".requests__datetime-date").textContent.split(" ")[14];
+
 // Checking status of trip when it could be any number of statuses
 function checkStatus() {
 	if((document.getElementsByClassName("request-modal-toolbar__status-name")[0].innerText.indexOf("Scheduled") !== -1) || (document.getElementsByClassName("request-modal-toolbar__status-name")[0].innerText.indexOf("Driver Accepted") !== -1) || (document.getElementsByClassName("request-modal-toolbar__status-name")[0].innerText.indexOf("Scheduled") !== -1)) {
