@@ -22,6 +22,11 @@
 
 <script>
 
+// old code
+let calendar = document.querySelector(".ui-datepicker");
+// new code
+let calendar = document.querySelector(".ui-datepicker__body");
+
 // get element by xpath
 function getElementByXpath(path) {
   return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
