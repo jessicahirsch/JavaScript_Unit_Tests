@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<p id="demo"></p>-------
+<p id="demo"></p>
 
 <button id="myBtn">My Button</button>
 <button id="myBtn">My Button</button>
@@ -22,7 +22,12 @@
 
 <script>
 
-<value is too large to edit>
+let isCurrent = function isCurrent(trip) {
+  let pickupTime = new Date(trip.querySelectorAll(".scheduledETADate")[0].innerText);
+  let now = new Date();
+  return pickupTime > now;
+}
+console.log(pickupTime > now);
 
 css: div.trip.trip--active > div.trip__element > div.trip__link
 css: .request-modal-header__trip > request-header-trip:first-of-type .trip .trip__element .trip__link
